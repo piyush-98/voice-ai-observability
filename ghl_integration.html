@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Voice AI Observability - GHL Integration</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: #f7f8f9;
+            margin: 0;
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+        }
+        .header {
+            background-color: #ffffff;
+            padding: 15px 30px;
+            border-bottom: 1px solid #e0e0e0;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        .ghl-logo {
+            font-weight: bold;
+            color: #2a3135;
+            font-size: 20px;
+        }
+        .content {
+            flex: 1;
+            display: flex;
+        }
+        .sidebar-mock {
+            width: 200px;
+            background-color: #ffffff;
+            border-right: 1px solid #e0e0e0;
+            padding: 20px;
+        }
+        .iframe-container {
+            flex: 1;
+            padding: 0;
+        }
+        iframe {
+            width: 100%;
+            height: 100%;
+            border: none;
+        }
+        .instruction-banner {
+            background-color: #38bdf8;
+            color: white;
+            padding: 10px;
+            text-align: center;
+            font-size: 14px;
+        }
+    </style>
+</head>
+<body>
+    <div class="instruction-banner">
+        🚀 <strong>Integration Guide:</strong> To add this to GoHighLevel, go to <strong>Settings > Custom Menu Link</strong> and use your hosted URL as the link.
+    </div>
+    
+    <div class="header">
+        <div class="ghl-logo">GoHighLevel <span style="font-weight: normal; color: #888;">| Sandbox</span></div>
+        <div style="font-size: 14px; color: #666;">Location: AI Sales Hub</div>
+    </div>
+
+    <div class="content">
+        <div class="sidebar-mock">
+            <div style="margin-bottom: 20px; color: #888; font-size: 11px; text-transform: uppercase;">Launchpad</div>
+            <div style="margin-bottom: 15px; color: #333; font-weight: 500;">Conversations</div>
+            <div style="margin-bottom: 15px; color: #333; font-weight: 500;">Opportunities</div>
+            <div style="margin-bottom: 15px; color: #38bdf8; font-weight: 700; border-left: 3px solid #38bdf8; padding-left: 10px; margin-left: -10px;">AI Observability</div>
+        </div>
+        <div class="iframe-container">
+            <!-- In a real deployment, this would be your hosted frontend URL -->
+            <!-- For local demo, we assume the dev server is running on port 5173 -->
+            <iframe src="http://localhost:5173"></iframe>
+        </div>
+    </div>
+</body>
+</html>

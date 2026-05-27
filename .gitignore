@@ -1,0 +1,19 @@
+# Dependencies
+node_modules/
+.pnpm-store/
+
+# Environment Variables & Tokens (Crucial Security Check)
+.env
+.env.local
+.env.*.local
+*.env
+
+# Databases & local state files
+backend/db.json
+
+# Build outputs & caches
+dist/
+build/
+.DS_Store
+.parcel-cache/
+.vite/
