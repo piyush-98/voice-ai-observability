@@ -4,7 +4,7 @@ import dotenv from 'dotenv';
 import db from './db/index.js';
 import { analyzeScript } from './services/gemini.js';
 import { evaluateCall } from './services/gemini.js';
-import { v4 as uuidv4 } from 'uuid';
+import { randomUUID } from 'crypto';
 
 dotenv.config();
 
@@ -45,7 +45,7 @@ app.post('/api/agents', async (req, res) => {
         const kpis = await analyzeScript(script);
         
         const newAgent = {
-            id: uuidv4(),
+            id: randomUUID(),
             name,
             script,
             kpis,
@@ -73,7 +73,7 @@ app.post('/api/calls/upload', async (req, res) => {
         const analysis = await evaluateCall(transcript, agent.kpis);
         
         const newCall = {
-            id: uuidv4(),
+            id: randomUUID(),
             agentId,
             agentName: agent.name,
             callerName,

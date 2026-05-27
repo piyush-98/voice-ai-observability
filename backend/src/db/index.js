@@ -9,5 +9,7 @@ const adapter = new JSONFile('/home/fa064050/Desktop/voice-ai-observability/back
 const db = new Low(adapter, defaultData);
 
 await db.read();
+db.data ||= defaultData;
+await db.write();
 
 export default db;
